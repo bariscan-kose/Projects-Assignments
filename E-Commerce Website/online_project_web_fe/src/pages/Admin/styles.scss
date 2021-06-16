@@ -1,0 +1,150 @@
+.admin {
+  padding: 0 10px;
+
+  .callToActions {
+    display: inline-block;
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+
+    ul, li {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+    }
+
+    ul {
+      li {
+        display: inline-block;
+
+      }
+    }
+
+  }
+}
+#adminorderlabel{
+  display: inline-block;
+  
+}
+#adminorderinput1{
+  display: inline-block;
+  margin-left: 49px;
+  border-radius: 10px;
+}
+
+#adminorderform{
+  margin-top: 15px;
+  display: inline-block;
+  border-radius: 10px;
+  border: 1px solid;
+  padding: 10px;
+  background-color: #d3d3d342;
+}
+#adminorderinput2{
+  display: inline-block;
+  margin-left: 15px;
+  border-radius: 10px;
+}
+#orderbutton2{
+  width: 100%;
+  display: inline-block;
+  margin-top: 15px;
+ 
+  
+  font-size: 1.0rem;
+  line-height: 1;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-align: center;
+  color: white;
+  background: black;
+  padding: 1rem 10px;
+  
+  border: 0;
+  outline: none;
+  cursor: pointer;
+}
+#orderbutton2{
+  width: 1.0rem;
+  display: inline-block;
+  margin-top: 15px;
+  display: block;
+  
+  font-size: 1.8rem;
+  line-height: 1;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-align: center;
+  color: white;
+  background: black;
+  padding: 1rem 10px;
+  
+  border: 0;
+  outline: none;
+  cursor: pointer;
+
+}
+
+#orderbutton{
+    width: 15.0rem;
+    display: inline-block;
+    margin-top: 15px;
+    display: block;
+    
+    font-size: 1.8rem;
+    line-height: 1;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+    background: black;
+    padding: 1rem 10px;
+    
+    border: 0;
+    outline: none;
+    cursor: pointer;
+  
+}
+.manageProducts {
+
+  h1 {
+    margin-top: 1.5rem;
+  }
+
+  table.results {
+    tr {
+
+      &:nth-child(even) {
+        background-color: #d3d3d3;
+      }
+
+      .thumb {
+        width: 15.0rem;
+        margin: 0 auto;
+      }
+
+    }
+  }
+}
+
+@media only screen and (max-width: 980px) {
+  .manageProducts {
+    table {
+      width: 100%;
+
+      .results {
+        width: 100%;
+
+        tr td {
+          display: block;
+          width: 100%;
+
+          img {
+            display: block;
+            width: 100% !important;
+          }
+        }
+      }
+    }
+  }
+}
