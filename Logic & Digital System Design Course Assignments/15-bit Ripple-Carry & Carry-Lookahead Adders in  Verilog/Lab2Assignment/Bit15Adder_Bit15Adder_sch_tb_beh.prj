@@ -1,0 +1,5 @@
+verilog work "FullAdder.vf"
+verilog work "Bit15Adder.vf"
+verilog work "Bit15AdderTest.v"
+verilog work "Bit3Adder.vf"
+verilog work "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

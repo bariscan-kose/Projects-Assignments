@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "C:/Xilinx/Projects/Lab2Assignment2/Bit15CLAAdderSubtractor_Bit15CLAAdderSubtractor_sch_tb_isim_beh.exe" -prj "C:/Xilinx/Projects/Lab2Assignment2/Bit15CLAAdderSubtractor_Bit15CLAAdderSubtractor_sch_tb_beh.prj" "work.Bit15CLAAdderSubtractor_Bit15CLAAdderSubtractor_sch_tb" "work.glbl" 

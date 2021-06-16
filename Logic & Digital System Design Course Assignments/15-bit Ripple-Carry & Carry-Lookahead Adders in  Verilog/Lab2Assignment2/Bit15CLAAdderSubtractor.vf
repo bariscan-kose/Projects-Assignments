@@ -1,0 +1,468 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : Bit15CLAAdderSubtractor.vf
+// /___/   /\     Timestamp : 12/02/2020 02:14:09
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan3e -verilog C:/Xilinx/Projects/Lab2Assignment2/Bit15CLAAdderSubtractor.vf -w C:/Xilinx/Projects/Lab2Assignment2/Bit15CLAAdderSubtractor.sch
+//Design Name: Bit15CLAAdderSubtractor
+//Device: spartan3e
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module LastCLAAdder_MUSER_Bit15CLAAdderSubtractor(A0_3, 
+                                                  A1_3, 
+                                                  A2_3, 
+                                                  B0_3, 
+                                                  B1_3, 
+                                                  B2_3, 
+                                                  C0_3, 
+                                                  OVF, 
+                                                  S0_3, 
+                                                  S1_3, 
+                                                  S2_3);
+
+    input A0_3;
+    input A1_3;
+    input A2_3;
+    input B0_3;
+    input B1_3;
+    input B2_3;
+    input C0_3;
+   output OVF;
+   output S0_3;
+   output S1_3;
+   output S2_3;
+   
+   wire C1_3;
+   wire C2_3;
+   wire C3_3;
+   wire G0_3;
+   wire G1_3;
+   wire G2_3;
+   wire P0_3;
+   wire P1_3;
+   wire P2_3;
+   wire XLXN_5;
+   wire XLXN_42;
+   wire XLXN_43;
+   wire XLXN_48;
+   wire XLXN_49;
+   wire XLXN_50;
+   
+   AND2  XLXI_1 (.I0(B0_3), 
+                .I1(A0_3), 
+                .O(G0_3));
+   XOR2  XLXI_2 (.I0(B2_3), 
+                .I1(A2_3), 
+                .O(P2_3));
+   AND2  XLXI_3 (.I0(B2_3), 
+                .I1(A2_3), 
+                .O(G2_3));
+   AND2  XLXI_5 (.I0(C0_3), 
+                .I1(P0_3), 
+                .O(XLXN_5));
+   XOR2  XLXI_6 (.I0(B1_3), 
+                .I1(A1_3), 
+                .O(P1_3));
+   AND2  XLXI_7 (.I0(B1_3), 
+                .I1(A1_3), 
+                .O(G1_3));
+   OR2  XLXI_8 (.I0(XLXN_5), 
+               .I1(G0_3), 
+               .O(C1_3));
+   OR3  XLXI_9 (.I0(XLXN_42), 
+               .I1(XLXN_43), 
+               .I2(G1_3), 
+               .O(C2_3));
+   XOR2  XLXI_11 (.I0(B0_3), 
+                 .I1(A0_3), 
+                 .O(P0_3));
+   AND2  XLXI_12 (.I0(G0_3), 
+                 .I1(P1_3), 
+                 .O(XLXN_42));
+   OR4  XLXI_15 (.I0(XLXN_48), 
+                .I1(XLXN_49), 
+                .I2(XLXN_50), 
+                .I3(G2_3), 
+                .O(C3_3));
+   AND3  XLXI_20 (.I0(C0_3), 
+                 .I1(P0_3), 
+                 .I2(P1_3), 
+                 .O(XLXN_43));
+   AND2  XLXI_21 (.I0(P2_3), 
+                 .I1(G1_3), 
+                 .O(XLXN_48));
+   AND3  XLXI_40 (.I0(P2_3), 
+                 .I1(P1_3), 
+                 .I2(G0_3), 
+                 .O(XLXN_49));
+   AND4  XLXI_41 (.I0(P2_3), 
+                 .I1(P1_3), 
+                 .I2(P0_3), 
+                 .I3(C0_3), 
+                 .O(XLXN_50));
+   XOR2  XLXI_44 (.I0(P0_3), 
+                 .I1(C0_3), 
+                 .O(S0_3));
+   XOR2  XLXI_45 (.I0(P1_3), 
+                 .I1(C1_3), 
+                 .O(S1_3));
+   XOR2  XLXI_46 (.I0(P2_3), 
+                 .I1(C2_3), 
+                 .O(S2_3));
+   XOR2  XLXI_47 (.I0(C2_3), 
+                 .I1(C3_3), 
+                 .O(OVF));
+endmodule
+`timescale 1ns / 1ps
+
+module Bit3CarryLookAheadAdder_MUSER_Bit15CLAAdderSubtractor(A0_3, 
+                                                             A1_3, 
+                                                             A2_3, 
+                                                             B0_3, 
+                                                             B1_3, 
+                                                             B2_3, 
+                                                             C0_3, 
+                                                             C3_3, 
+                                                             S0_3, 
+                                                             S1_3, 
+                                                             S2_3);
+
+    input A0_3;
+    input A1_3;
+    input A2_3;
+    input B0_3;
+    input B1_3;
+    input B2_3;
+    input C0_3;
+   output C3_3;
+   output S0_3;
+   output S1_3;
+   output S2_3;
+   
+   wire C1_3;
+   wire C2_3;
+   wire G0_3;
+   wire G1_3;
+   wire G2_3;
+   wire P0_3;
+   wire P1_3;
+   wire P2_3;
+   wire XLXN_16;
+   wire XLXN_42;
+   wire XLXN_43;
+   wire XLXN_48;
+   wire XLXN_49;
+   wire XLXN_50;
+   
+   AND2  XLXI_1 (.I0(B0_3), 
+                .I1(A0_3), 
+                .O(G0_3));
+   AND2  XLXI_2 (.I0(B1_3), 
+                .I1(A1_3), 
+                .O(G1_3));
+   AND2  XLXI_3 (.I0(B2_3), 
+                .I1(A2_3), 
+                .O(G2_3));
+   XOR2  XLXI_5 (.I0(B0_3), 
+                .I1(A0_3), 
+                .O(P0_3));
+   XOR2  XLXI_6 (.I0(B1_3), 
+                .I1(A1_3), 
+                .O(P1_3));
+   XOR2  XLXI_7 (.I0(B2_3), 
+                .I1(A2_3), 
+                .O(P2_3));
+   AND2  XLXI_14 (.I0(C0_3), 
+                 .I1(P0_3), 
+                 .O(XLXN_16));
+   OR2  XLXI_15 (.I0(XLXN_16), 
+                .I1(G0_3), 
+                .O(C1_3));
+   OR3  XLXI_16 (.I0(XLXN_42), 
+                .I1(XLXN_43), 
+                .I2(G1_3), 
+                .O(C2_3));
+   OR4  XLXI_17 (.I0(XLXN_48), 
+                .I1(XLXN_49), 
+                .I2(XLXN_50), 
+                .I3(G2_3), 
+                .O(C3_3));
+   AND2  XLXI_19 (.I0(G0_3), 
+                 .I1(P1_3), 
+                 .O(XLXN_42));
+   AND3  XLXI_20 (.I0(C0_3), 
+                 .I1(P0_3), 
+                 .I2(P1_3), 
+                 .O(XLXN_43));
+   AND2  XLXI_21 (.I0(P2_3), 
+                 .I1(G1_3), 
+                 .O(XLXN_48));
+   AND3  XLXI_40 (.I0(P2_3), 
+                 .I1(P1_3), 
+                 .I2(G0_3), 
+                 .O(XLXN_49));
+   AND4  XLXI_41 (.I0(P2_3), 
+                 .I1(P1_3), 
+                 .I2(P0_3), 
+                 .I3(C0_3), 
+                 .O(XLXN_50));
+   XOR2  XLXI_44 (.I0(P0_3), 
+                 .I1(C0_3), 
+                 .O(S0_3));
+   XOR2  XLXI_45 (.I0(P1_3), 
+                 .I1(C1_3), 
+                 .O(S1_3));
+   XOR2  XLXI_46 (.I0(P2_3), 
+                 .I1(C2_3), 
+                 .O(S2_3));
+endmodule
+`timescale 1ns / 1ps
+
+module Bit15CLAAdderSubtractor(A0, 
+                               A1, 
+                               A2, 
+                               A3, 
+                               A4, 
+                               A5, 
+                               A6, 
+                               A7, 
+                               A8, 
+                               A9, 
+                               A10, 
+                               A11, 
+                               A12, 
+                               A13, 
+                               A14, 
+                               B0, 
+                               B1, 
+                               B2, 
+                               B3, 
+                               B4, 
+                               B5, 
+                               B6, 
+                               B7, 
+                               B8, 
+                               B9, 
+                               B10, 
+                               B11, 
+                               B12, 
+                               B13, 
+                               B14, 
+                               SUB, 
+                               C0, 
+                               C1, 
+                               C2, 
+                               C3, 
+                               C4, 
+                               C5, 
+                               C6, 
+                               C7, 
+                               C8, 
+                               C9, 
+                               C10, 
+                               C11, 
+                               C12, 
+                               C13, 
+                               C14, 
+                               OVF);
+
+    input A0;
+    input A1;
+    input A2;
+    input A3;
+    input A4;
+    input A5;
+    input A6;
+    input A7;
+    input A8;
+    input A9;
+    input A10;
+    input A11;
+    input A12;
+    input A13;
+    input A14;
+    input B0;
+    input B1;
+    input B2;
+    input B3;
+    input B4;
+    input B5;
+    input B6;
+    input B7;
+    input B8;
+    input B9;
+    input B10;
+    input B11;
+    input B12;
+    input B13;
+    input B14;
+    input SUB;
+   output C0;
+   output C1;
+   output C2;
+   output C3;
+   output C4;
+   output C5;
+   output C6;
+   output C7;
+   output C8;
+   output C9;
+   output C10;
+   output C11;
+   output C12;
+   output C13;
+   output C14;
+   output OVF;
+   
+   wire XLXN_1;
+   wire XLXN_2;
+   wire XLXN_3;
+   wire XLXN_4;
+   wire XLXN_6;
+   wire XLXN_7;
+   wire XLXN_8;
+   wire XLXN_9;
+   wire XLXN_10;
+   wire XLXN_11;
+   wire XLXN_12;
+   wire XLXN_13;
+   wire XLXN_14;
+   wire XLXN_15;
+   wire XLXN_16;
+   wire XLXN_17;
+   wire XLXN_18;
+   wire XLXN_19;
+   wire XLXN_20;
+   
+   XOR2  XLXI_6 (.I0(B2), 
+                .I1(SUB), 
+                .O(XLXN_8));
+   XOR2  XLXI_7 (.I0(B1), 
+                .I1(SUB), 
+                .O(XLXN_7));
+   XOR2  XLXI_8 (.I0(B0), 
+                .I1(SUB), 
+                .O(XLXN_6));
+   XOR2  XLXI_9 (.I0(B4), 
+                .I1(SUB), 
+                .O(XLXN_10));
+   XOR2  XLXI_10 (.I0(B3), 
+                 .I1(SUB), 
+                 .O(XLXN_9));
+   XOR2  XLXI_11 (.I0(B5), 
+                 .I1(SUB), 
+                 .O(XLXN_11));
+   XOR2  XLXI_12 (.I0(B7), 
+                 .I1(SUB), 
+                 .O(XLXN_13));
+   XOR2  XLXI_13 (.I0(B6), 
+                 .I1(SUB), 
+                 .O(XLXN_12));
+   XOR2  XLXI_14 (.I0(B8), 
+                 .I1(SUB), 
+                 .O(XLXN_14));
+   XOR2  XLXI_15 (.I0(B10), 
+                 .I1(SUB), 
+                 .O(XLXN_16));
+   XOR2  XLXI_16 (.I0(B9), 
+                 .I1(SUB), 
+                 .O(XLXN_15));
+   XOR2  XLXI_17 (.I0(B11), 
+                 .I1(SUB), 
+                 .O(XLXN_17));
+   XOR2  XLXI_18 (.I0(B13), 
+                 .I1(SUB), 
+                 .O(XLXN_19));
+   XOR2  XLXI_19 (.I0(B12), 
+                 .I1(SUB), 
+                 .O(XLXN_18));
+   XOR2  XLXI_20 (.I0(B14), 
+                 .I1(SUB), 
+                 .O(XLXN_20));
+   Bit3CarryLookAheadAdder_MUSER_Bit15CLAAdderSubtractor  XLXI_42 (.A0_3(A9), 
+                                                                  .A1_3(A10), 
+                                                                  .A2_3(A11), 
+                                                                  
+         .B0_3(XLXN_15), 
+                                                                  
+         .B1_3(XLXN_16), 
+                                                                  
+         .B2_3(XLXN_17), 
+                                                                  
+         .C0_3(XLXN_2), 
+                                                                  
+         .C3_3(XLXN_1), 
+                                                                  .S0_3(C9), 
+                                                                  .S1_3(C10), 
+                                                                  .S2_3(C11));
+   Bit3CarryLookAheadAdder_MUSER_Bit15CLAAdderSubtractor  XLXI_43 (.A0_3(A6), 
+                                                                  .A1_3(A7), 
+                                                                  .A2_3(A8), 
+                                                                  
+         .B0_3(XLXN_12), 
+                                                                  
+         .B1_3(XLXN_13), 
+                                                                  
+         .B2_3(XLXN_14), 
+                                                                  
+         .C0_3(XLXN_3), 
+                                                                  
+         .C3_3(XLXN_2), 
+                                                                  .S0_3(C6), 
+                                                                  .S1_3(C7), 
+                                                                  .S2_3(C8));
+   Bit3CarryLookAheadAdder_MUSER_Bit15CLAAdderSubtractor  XLXI_44 (.A0_3(A3), 
+                                                                  .A1_3(A4), 
+                                                                  .A2_3(A5), 
+                                                                  
+         .B0_3(XLXN_9), 
+                                                                  
+         .B1_3(XLXN_10), 
+                                                                  
+         .B2_3(XLXN_11), 
+                                                                  
+         .C0_3(XLXN_4), 
+                                                                  
+         .C3_3(XLXN_3), 
+                                                                  .S0_3(C3), 
+                                                                  .S1_3(C4), 
+                                                                  .S2_3(C5));
+   Bit3CarryLookAheadAdder_MUSER_Bit15CLAAdderSubtractor  XLXI_45 (.A0_3(A0), 
+                                                                  .A1_3(A1), 
+                                                                  .A2_3(A2), 
+                                                                  
+         .B0_3(XLXN_6), 
+                                                                  
+         .B1_3(XLXN_7), 
+                                                                  
+         .B2_3(XLXN_8), 
+                                                                  .C0_3(SUB), 
+                                                                  
+         .C3_3(XLXN_4), 
+                                                                  .S0_3(C0), 
+                                                                  .S1_3(C1), 
+                                                                  .S2_3(C2));
+   LastCLAAdder_MUSER_Bit15CLAAdderSubtractor  XLXI_46 (.A0_3(A12), 
+                                                       .A1_3(A13), 
+                                                       .A2_3(A14), 
+                                                       .B0_3(XLXN_18), 
+                                                       .B1_3(XLXN_19), 
+                                                       .B2_3(XLXN_20), 
+                                                       .C0_3(XLXN_1), 
+                                                       .OVF(OVF), 
+                                                       .S0_3(C12), 
+                                                       .S1_3(C13), 
+                                                       .S2_3(C14));
+endmodule

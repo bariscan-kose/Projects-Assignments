@@ -1,0 +1,5 @@
+verilog work "Bit5CLAAdderL.v"
+verilog work "Bit5CLAAdder.v"
+verilog work "Bit20CLAAdder.v"
+verilog work "Bit20CLATest.v"
+verilog work "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

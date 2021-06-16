@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/Xilinx/Projects/Lab3Assignment2/Bit20CLATest_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="Bit20CLATest" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="6" />
+   <wvobject fp_name="/Bit20CLATest/Carry" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">Carry</obj_property>
+      <obj_property name="ObjectShortName">Carry</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Bit20CLATest/OVF" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">OVF</obj_property>
+      <obj_property name="ObjectShortName">OVF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#0000ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Bit20CLATest/SUB" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">SUB</obj_property>
+      <obj_property name="ObjectShortName">SUB</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#0000ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Bit20CLATest/A" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">A[19:0]</obj_property>
+      <obj_property name="ObjectShortName">A[19:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#ff0000</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Bit20CLATest/B" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">B[19:0]</obj_property>
+      <obj_property name="ObjectShortName">B[19:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#ff0000</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Bit20CLATest/Sum" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">Sum[19:0]</obj_property>
+      <obj_property name="ObjectShortName">Sum[19:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#ff0000</obj_property>
+   </wvobject>
+</wave_config>

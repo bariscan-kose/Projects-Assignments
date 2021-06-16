@@ -1,0 +1,309 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : Bit15Adder.vf
+// /___/   /\     Timestamp : 12/01/2020 23:34:18
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan3e -verilog C:/Xilinx/Projects/Lab2Assignment/Bit15Adder.vf -w C:/Xilinx/Projects/Lab2Assignment/Bit15Adder.sch
+//Design Name: Bit15Adder
+//Device: spartan3e
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module FullAdder_MUSER_Bit15Adder(A, 
+                                  B, 
+                                  CarryI, 
+                                  CarryO, 
+                                  Sum);
+
+    input A;
+    input B;
+    input CarryI;
+   output CarryO;
+   output Sum;
+   
+   wire XLXN_5;
+   wire XLXN_6;
+   wire XLXN_7;
+   
+   XOR3  XLXI_1 (.I0(B), 
+                .I1(A), 
+                .I2(CarryI), 
+                .O(Sum));
+   AND2  XLXI_2 (.I0(A), 
+                .I1(CarryI), 
+                .O(XLXN_5));
+   AND2  XLXI_3 (.I0(B), 
+                .I1(CarryI), 
+                .O(XLXN_6));
+   AND2  XLXI_4 (.I0(A), 
+                .I1(B), 
+                .O(XLXN_7));
+   OR3  XLXI_5 (.I0(XLXN_7), 
+               .I1(XLXN_6), 
+               .I2(XLXN_5), 
+               .O(CarryO));
+endmodule
+`timescale 1ns / 1ps
+
+module Bit15Adder(A0, 
+                  A1, 
+                  A2, 
+                  A3, 
+                  A4, 
+                  A5, 
+                  A6, 
+                  A7, 
+                  A8, 
+                  A9, 
+                  A10, 
+                  A11, 
+                  A12, 
+                  A13, 
+                  A14, 
+                  B0, 
+                  B1, 
+                  B2, 
+                  B3, 
+                  B4, 
+                  B5, 
+                  B6, 
+                  B7, 
+                  B8, 
+                  B9, 
+                  B10, 
+                  B11, 
+                  B12, 
+                  B13, 
+                  B14, 
+                  SUB, 
+                  C0, 
+                  C1, 
+                  C2, 
+                  C3, 
+                  C4, 
+                  C5, 
+                  C6, 
+                  C7, 
+                  C8, 
+                  C9, 
+                  C10, 
+                  C11, 
+                  C12, 
+                  C13, 
+                  C14, 
+                  OVF);
+
+    input A0;
+    input A1;
+    input A2;
+    input A3;
+    input A4;
+    input A5;
+    input A6;
+    input A7;
+    input A8;
+    input A9;
+    input A10;
+    input A11;
+    input A12;
+    input A13;
+    input A14;
+    input B0;
+    input B1;
+    input B2;
+    input B3;
+    input B4;
+    input B5;
+    input B6;
+    input B7;
+    input B8;
+    input B9;
+    input B10;
+    input B11;
+    input B12;
+    input B13;
+    input B14;
+    input SUB;
+   output C0;
+   output C1;
+   output C2;
+   output C3;
+   output C4;
+   output C5;
+   output C6;
+   output C7;
+   output C8;
+   output C9;
+   output C10;
+   output C11;
+   output C12;
+   output C13;
+   output C14;
+   output OVF;
+   
+   wire XLXN_16;
+   wire XLXN_17;
+   wire XLXN_18;
+   wire XLXN_19;
+   wire XLXN_20;
+   wire XLXN_21;
+   wire XLXN_22;
+   wire XLXN_23;
+   wire XLXN_24;
+   wire XLXN_25;
+   wire XLXN_26;
+   wire XLXN_27;
+   wire XLXN_28;
+   wire XLXN_29;
+   wire XLXN_30;
+   wire XLXN_73;
+   wire XLXN_75;
+   wire XLXN_77;
+   wire XLXN_79;
+   wire XLXN_81;
+   wire XLXN_87;
+   wire XLXN_89;
+   wire XLXN_91;
+   wire XLXN_98;
+   wire XLXN_108;
+   wire XLXN_110;
+   wire XLXN_112;
+   wire XLXN_134;
+   wire XLXN_149;
+   wire XLXN_155;
+   
+   FullAdder_MUSER_Bit15Adder  XLXI_1 (.A(A0), 
+                                      .B(XLXN_25), 
+                                      .CarryI(SUB), 
+                                      .CarryO(XLXN_73), 
+                                      .Sum(C0));
+   FullAdder_MUSER_Bit15Adder  XLXI_2 (.A(A1), 
+                                      .B(XLXN_24), 
+                                      .CarryI(XLXN_73), 
+                                      .CarryO(XLXN_75), 
+                                      .Sum(C1));
+   FullAdder_MUSER_Bit15Adder  XLXI_3 (.A(A2), 
+                                      .B(XLXN_23), 
+                                      .CarryI(XLXN_75), 
+                                      .CarryO(XLXN_77), 
+                                      .Sum(C2));
+   FullAdder_MUSER_Bit15Adder  XLXI_4 (.A(A3), 
+                                      .B(XLXN_22), 
+                                      .CarryI(XLXN_77), 
+                                      .CarryO(XLXN_79), 
+                                      .Sum(C3));
+   FullAdder_MUSER_Bit15Adder  XLXI_5 (.A(A4), 
+                                      .B(XLXN_21), 
+                                      .CarryI(XLXN_79), 
+                                      .CarryO(XLXN_81), 
+                                      .Sum(C4));
+   FullAdder_MUSER_Bit15Adder  XLXI_21 (.A(A5), 
+                                       .B(XLXN_20), 
+                                       .CarryI(XLXN_81), 
+                                       .CarryO(XLXN_87), 
+                                       .Sum(C5));
+   FullAdder_MUSER_Bit15Adder  XLXI_22 (.A(A6), 
+                                       .B(XLXN_19), 
+                                       .CarryI(XLXN_87), 
+                                       .CarryO(XLXN_89), 
+                                       .Sum(C6));
+   FullAdder_MUSER_Bit15Adder  XLXI_23 (.A(A7), 
+                                       .B(XLXN_18), 
+                                       .CarryI(XLXN_89), 
+                                       .CarryO(XLXN_91), 
+                                       .Sum(C7));
+   FullAdder_MUSER_Bit15Adder  XLXI_24 (.A(A8), 
+                                       .B(XLXN_17), 
+                                       .CarryI(XLXN_91), 
+                                       .CarryO(XLXN_98), 
+                                       .Sum(C8));
+   FullAdder_MUSER_Bit15Adder  XLXI_25 (.A(A9), 
+                                       .B(XLXN_16), 
+                                       .CarryI(XLXN_98), 
+                                       .CarryO(XLXN_134), 
+                                       .Sum(C9));
+   FullAdder_MUSER_Bit15Adder  XLXI_26 (.A(A10), 
+                                       .B(XLXN_26), 
+                                       .CarryI(XLXN_134), 
+                                       .CarryO(XLXN_112), 
+                                       .Sum(C10));
+   FullAdder_MUSER_Bit15Adder  XLXI_27 (.A(A11), 
+                                       .B(XLXN_27), 
+                                       .CarryI(XLXN_112), 
+                                       .CarryO(XLXN_110), 
+                                       .Sum(C11));
+   FullAdder_MUSER_Bit15Adder  XLXI_28 (.A(A12), 
+                                       .B(XLXN_28), 
+                                       .CarryI(XLXN_110), 
+                                       .CarryO(XLXN_108), 
+                                       .Sum(C12));
+   FullAdder_MUSER_Bit15Adder  XLXI_29 (.A(A13), 
+                                       .B(XLXN_29), 
+                                       .CarryI(XLXN_108), 
+                                       .CarryO(XLXN_149), 
+                                       .Sum(C13));
+   XOR2  XLXI_71 (.I0(B9), 
+                 .I1(SUB), 
+                 .O(XLXN_16));
+   XOR2  XLXI_72 (.I0(B8), 
+                 .I1(SUB), 
+                 .O(XLXN_17));
+   XOR2  XLXI_73 (.I0(B7), 
+                 .I1(SUB), 
+                 .O(XLXN_18));
+   XOR2  XLXI_74 (.I0(B6), 
+                 .I1(SUB), 
+                 .O(XLXN_19));
+   XOR2  XLXI_75 (.I0(B5), 
+                 .I1(SUB), 
+                 .O(XLXN_20));
+   XOR2  XLXI_78 (.I0(B4), 
+                 .I1(SUB), 
+                 .O(XLXN_21));
+   XOR2  XLXI_79 (.I0(B3), 
+                 .I1(SUB), 
+                 .O(XLXN_22));
+   XOR2  XLXI_80 (.I0(B2), 
+                 .I1(SUB), 
+                 .O(XLXN_23));
+   XOR2  XLXI_81 (.I0(B1), 
+                 .I1(SUB), 
+                 .O(XLXN_24));
+   XOR2  XLXI_82 (.I0(B0), 
+                 .I1(SUB), 
+                 .O(XLXN_25));
+   XOR2  XLXI_83 (.I0(B10), 
+                 .I1(SUB), 
+                 .O(XLXN_26));
+   XOR2  XLXI_84 (.I0(B11), 
+                 .I1(SUB), 
+                 .O(XLXN_27));
+   XOR2  XLXI_86 (.I0(B12), 
+                 .I1(SUB), 
+                 .O(XLXN_28));
+   XOR2  XLXI_87 (.I0(B13), 
+                 .I1(SUB), 
+                 .O(XLXN_29));
+   XOR2  XLXI_88 (.I0(B14), 
+                 .I1(SUB), 
+                 .O(XLXN_30));
+   XOR2  XLXI_129 (.I0(XLXN_155), 
+                  .I1(XLXN_149), 
+                  .O(OVF));
+   FullAdder_MUSER_Bit15Adder  XLXI_130 (.A(A14), 
+                                        .B(XLXN_30), 
+                                        .CarryI(XLXN_149), 
+                                        .CarryO(XLXN_155), 
+                                        .Sum(C14));
+endmodule

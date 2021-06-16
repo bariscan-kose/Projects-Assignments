@@ -1,0 +1,5 @@
+xst -intstyle ise -ifn "C:/Xilinx/Projects/Lab2Assignment/Bit15Adder.xst" -ofn "C:/Xilinx/Projects/Lab2Assignment/Bit15Adder.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s100e-tq144-4 Bit15Adder.ngc Bit15Adder.ngd  
+map -intstyle ise -p xc3s100e-tq144-4 -cm area -ir off -pr off -c 100 -o Bit15Adder_map.ncd Bit15Adder.ngd Bit15Adder.pcf 
+par -w -intstyle ise -ol high -t 1 Bit15Adder_map.ncd Bit15Adder.ncd Bit15Adder.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml Bit15Adder.twx Bit15Adder.ncd -o Bit15Adder.twr Bit15Adder.pcf 
