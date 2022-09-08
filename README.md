@@ -1,2 +1,2 @@
 # Projects-Assignments
-Interested in Machine Learning & Embedded Software Engineering
+Interested in Technology & Nature.
