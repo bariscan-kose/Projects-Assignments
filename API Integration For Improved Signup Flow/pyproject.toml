@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "mapp-sftp"
+version = "0.1.0"
+description = "This is the MAPP/Encircl SFTP Integration to Turing."
+authors = ["bariscan-kose <bariscan.kose@turing.com>"]
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.11"
+requests = "^2.27.1"
+click = "^8.1.2"
+pydantic = "^1.9.0"
+pandas = "^1.4.2"
+gcloud = "^0.18.3"
+google-cloud-bigquery = "^3.0.1"
+pysftp = "^0.2.9"
+
+[tool.poetry.scripts]
+mapp="mapp_sftp.cli:update"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

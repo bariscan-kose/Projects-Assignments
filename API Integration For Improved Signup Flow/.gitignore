@@ -1,0 +1,4 @@
+*.swp
+__pycache__
+mapp_sftp/__pycache__/
+*.json
